@@ -1,0 +1,108 @@
+---
+//Componentes
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SocialPick from "../components/SocialPick.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Footer from "../components/Footer.astro";
+import Proyectos from "../components/Proyectos.astro"
+
+//Iconos
+import UnrealInIcons from "../Icons/UnrealInIcons.astro";
+import UnityInIcons from "../Icons/UnityIcons.astro";
+import InstagramIcons from "../Icons/Instagram.astro";
+import LinkedInIcons from "../Icons/Linkedin.astro";
+import GitHubIcons from "../Icons/GitHub.astro";
+import TwitterIcons from "../Icons/Twitter.astro";
+import ProfileIcons from "../Icons/ProfileIcons.astro";
+import Code from "../Icons/Code.astro";
+---
+
+<Layout title="ManGe Porfolio - Inicio">
+  <main class="px-4">
+    <SectionContainer class="py-40 pb-40" id="Inicio">
+      <img
+        class="rounded-full size-12 mb-4"
+        src="../../public/favicon.svg"
+        alt="ManGe1"
+      />
+      <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+        Hey, Soy Miguel Ángel
+      </h1>
+      <div
+        class="mt-2 py-5 items-center space-y-2 text-lg font-medium leading-none text-rose-100/50 lg:mt-0 lg:flex lg:space-y-0 lg:space-x-2"
+      >
+        <p>Experiencia desarrollando en</p>
+        <div class="flex space-x-2">
+          <a class="group flex items-center space-x-1.5" href="/">
+            <div class="mb-1 h-6 w-6 rounded-md">
+              <UnrealInIcons />
+            </div>
+            <div
+              class="group-hover:text-yellow-100 opacity-80 transition delay-75 ease-in-out"
+            >
+              Unreal Engine
+            </div>
+          </a>
+          <div class="text-2xl font-thin leading-none text-rose-100/10">/</div>
+          <a class="group flex items-center space-x-1.5" href="/">
+            <div class="mb-1 h-6 w-6 rounded-md">
+              <UnityInIcons />
+            </div>
+            <div
+              class="group-hover:text-yellow-100 opacity-80 transition delay-75 ease-in-out"
+            >
+              Unity
+            </div>
+          </a>
+        </div>
+      </div>
+      <h2 class="text-2xl opacity-80 text-wrap">
+        <span class="text-yellow-200/90 opacity-80"
+          >Desarrollador En Unreal Engine y Unity</span
+        >. <span class="text-red-100/90">De Cuidad Real, España</span>. <span
+          class="opacity-75">Especializado en crear VFX, Post Processing.</span
+        >
+      </h2>
+      <nav class="flex flex-wrap gap-x-4 mt-8">
+        <SocialPick href="https://www.linkedin.com/in/miguel-angel-villarreal-torres-514826280/">
+          <LinkedInIcons class="w-6 h-6" />
+          LinkedIn
+        </SocialPick>
+        <SocialPick href="https://github.com/ByManGe1">
+          <GitHubIcons class="w-6 h-6" />
+          GitHub
+        </SocialPick>
+        <SocialPick href="https://x.com/XSManGe1">
+          <TwitterIcons class="w-6 h-6" />
+          Twitter
+        </SocialPick>
+        <SocialPick href="https://www.instagram.com/elmange25/">
+          <InstagramIcons class="w-6 h-6" />
+          Instagram
+        </SocialPick>
+      </nav>
+    </SectionContainer>
+    <SectionContainer class= "pb-40" id="SobreMi">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-white"
+      >
+        <ProfileIcons class="size-8 text-white" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+
+    <SectionContainer>
+      <h2 
+      id="Proyectos"
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-white"
+      >
+        <Code class="size-8 text-white"/>
+        Proyectos
+      </h2>
+      <Proyectos/>
+    </SectionContainer>
+	<Footer/>
+  </main>
+</Layout>
