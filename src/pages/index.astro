@@ -4,7 +4,8 @@ import Layout from "../layouts/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import SocialPick from "../components/SocialPick.astro";
 import AboutMe from "../components/AboutMe.astro";
-import Proyectos from "../components/Proyectos.astro"
+import Proyectos from "../components/Proyectos.astro";
+
 
 //Iconos
 import UnrealInIcons from "../Icons/UnrealInIcons.astro";
@@ -15,25 +16,31 @@ import GitHubIcons from "../Icons/GitHub.astro";
 import TwitterIcons from "../Icons/Twitter.astro";
 import ProfileIcons from "../Icons/ProfileIcons.astro";
 import Code from "../Icons/Code.astro";
+import UnityIcons from "../Icons/UnityIcons.astro";
 ---
+
 
 <Layout title="ManGe Porfolio - Inicio">
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36" id="Inicio">
       <img
-        class="rounded-full  size-16 mb-4"
-        src="Logo.jpg"
-        alt="ManGe1"
+        class="rounded-full  size-16 mb-4 animate-fade-in-left"
+        src="/Logo.jpg"
+        decoding="async"
+        loading="lazy"
+        alt="ManGe"
       />
-      <h1 class="text-4xl font-bold tracking-tight text-gray-800 dark:text-white sm:text-5xl">
+      <h1
+        class="text-4xl font-bold tracking-tight text-gray-800 dark:text-white sm:text-5xl animate-fade-in-left"
+      >
         Hey, Soy Miguel Ángel
       </h1>
       <div
-        class="mt-2 py-5 items-center space-y-2 text-lg font-medium leading-none  dark:text-rose-100/50 lg:mt-0 lg:flex lg:space-y-0 lg:space-x-2"
+        class="mt-2 py-5 items-center space-y-2 text-lg font-medium leading-none dark:text-rose-100/50 lg:mt-0 lg:flex lg:space-y-0 lg:space-x-2"
       >
-        <p>Experiencia desarrollando en</p>
-        <div class="flex space-x-2">
-          <a class="group flex items-center space-x-1.5">
+        <p class="animate-fade-in-left">Experiencia desarrollando en</p>
+        <div class="flex space-x-2 animate-fade-in-left">
+          <span class="group flex items-center space-x-1.5">
             <div class="mb-1 h-6 w-6 bg-black rounded-full dark:bg-transparent">
               <UnrealInIcons />
             </div>
@@ -42,46 +49,55 @@ import Code from "../Icons/Code.astro";
             >
               Unreal Engine
             </div>
-          </a>
+          </span>
           <div class="text-2xl font-thin leading-none text-rose-100/10">/</div>
-          <a class="group flex items-center space-x-1.5">
-            <div class="mb-1 h-6 w-6 ">
-              <UnityInIcons />
+          <span class="group flex items-center space-x-1.5">
+            <div class="mb-1 h-6 w-6 bg-black rounded-full dark:bg-transparent">
+              <UnityIcons />
             </div>
             <div
               class="dark:group-hover:text-yellow-100 opacity-80 transition delay-75 ease-in-out cursor-pointer"
             >
               Unity
             </div>
-          </a>
+          </span>
         </div>
       </div>
-      <h2 class="text-2xl opacity-80 text-wrap">
+      <h2 class="text-2xl opacity-80 text-wrap animate-fade-in-left">
         <span class="dark:text-yellow-200/90 dark:opacity-80 text-black"
           >Desarrollador En Unreal Engine y Unity</span
         >. <span class="dark:text-red-100/90">De Ciudad Real, España</span>. <span
-          class="dark:opacity-75">Especializado en crear VFX, Post Processing.</span
+          class="dark:opacity-75"
+          >Especializado en crear VFX, Post Processing.</span
         >
       </h2>
-      <nav class="flex flex-wrap gap-x-4 mt-8">
-        <SocialPick href="https://www.linkedin.com/in/miguel-angel-villarreal-torres-514826280/">
+      <nav class="flex flex-wrap gap-x-4 mt-8 animate-fade-in-left">
+        <SocialPick
+          href="https://www.linkedin.com/in/miguel-angel-villarreal-torres-514826280/"
+          aria-label="Visitar Linkedin"
+        >
           <LinkedInIcons class="w-6 h-6" />
-        
         </SocialPick>
-        <SocialPick href="https://github.com/ByManGe1">
+        <SocialPick
+          href="https://github.com/ByManGe1"
+          aria-label="Visitar GitHub"
+        >
           <GitHubIcons class="w-6 h-6" />
         </SocialPick>
 
-        <SocialPick href="https://x.com/XSManGe1">
+        <SocialPick href="https://x.com/XSManGe1" aria-label="Visitar Twitter">
           <TwitterIcons class="w-6 h-6" />
         </SocialPick>
 
-        <SocialPick href="https://www.instagram.com/elmange25/">
+        <SocialPick
+          href="https://www.instagram.com/elmange25/"
+          aria-label="Visitar Instagram"
+        >
           <InstagramIcons class="w-6 h-6" />
         </SocialPick>
       </nav>
     </SectionContainer>
-    <SectionContainer class= "pb-40" id="SobreMi">
+    <SectionContainer class="pb-40 animate-fade-in-right" id="SobreMi">
       <h2
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
@@ -92,14 +108,17 @@ import Code from "../Icons/Code.astro";
     </SectionContainer>
 
     <SectionContainer>
-      <h2 
-      id="Proyectos"
+      <h2
+        id="Proyectos"
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
-        <Code class="size-8"/>
+        <Code class="size-8" />
         Proyectos
       </h2>
-      <Proyectos/>
+      <Proyectos />
     </SectionContainer>
   </main>
 </Layout>
+
+
+
