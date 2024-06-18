@@ -1,13 +1,19 @@
+---
+import Code from "../Icons/Code.astro";
+---
+
 <div class="flex gap-x-5 gap-y-16">
   <article
-    class="bg-black dark:bg-transparent mb-12 flex flex-col bg-contact border border-white/20 w-[300px] sm:w-[400px] rounded-lg hover:scale-105 transition-all duration-300 ease-in-out"
+  id = "card"
+    class=" dark:bg-transparent mb-12 flex flex-col bg-contact border dark:border-white/20 border-black/20 w-[300px] sm:w-[400px] rounded-lg hover:scale-105 transition-all duration-300 ease-in-out"
   >
     <img
+      id="cardImage"
       class="w-[266px] sm:w-[365px] rounded-lg m-4 opacity-90  transition-all duration-300 ease-in-out "
-      src="HorroDemo.png"
+      src="CocooMenu.png"
       alt="HorroDemo"
     />
-    <h3 class="text-xl font-bold text-white mx-4 mb-4">Horror - [En Desarrollo]</h3>
+    <h3 class="text-xl font-bold text-black dark:text-white mx-4 mb-4">Navigate Menu</h3>
     <div class="mb-4">
       <ul class="flex flex-row mb-4 gap-x-2 mx-4">
         <li>
@@ -53,14 +59,22 @@
               ></svg
             > C#
           </span>
+        </li><li>
+          <span
+            class="flex items-center gap-x-2 rounded-full text-xs bg-black text-white py-1 px-2 bg-[#991b1b] text-white"
+          >
+            <Code/> En Desarrollo
+          </span>
         </li>
       </ul>
-      <p class="text-base mx-4 text-white">
-        Alex, un hombre joven en sus veintitantos, regresa al pueblo donde creció para 
-        hacerse cargo de la venta de la antigua casa de su abuela. Desde su muerte, 
-        nadie ha puesto un pie en la casa, y las historias de los lugareños sobre extrañas 
-        apariciones y sonidos han crecido con los años.
+      <p class="text-base mx-4 text-black dark:text-white">
+        Este menú de navegación utiliza las últimas funciones de acciones de entrada 
+        para permitir una exploración fluida y rápida entre múltiples secciones. 
+        Está diseñado para optimizar la interacción del usuario, facilitando la navegación
+        intuitiva y eficiente a través de las distintas áreas disponibles.
       </p>
     </div>
   </article>
 </div>
+
+
