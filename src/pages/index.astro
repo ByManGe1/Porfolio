@@ -23,8 +23,9 @@ import UnityIcons from "../Icons/UnityIcons.astro";
 
 
 <Layout title="ManGe Porfolio - Inicio">
-  <main class="px-4">
-    <SectionContainer class="py-16 md:py-36" id="Inicio">
+  <main class="px-4 ">
+    <SectionContainer class="section py-16 md:py-36" id="Inicio">
+      <div class="max-w-xl">
       <img
         class="rounded-full  size-16 mb-4 animate-fade-in-left"
         src="https://avatars.githubusercontent.com/u/123424785?v=4"
@@ -37,27 +38,15 @@ import UnityIcons from "../Icons/UnityIcons.astro";
         Hey, Soy Miguel Ángel
       </h1>
       <div
-        class="mt-2 py-5 items-center space-y-2 text-lg font-medium leading-none dark:text-rose-100/50 lg:mt-0 lg:flex lg:space-y-0 lg:space-x-2"
+        class="mt-2 py-5 items-center space-y-2 text-lg font-medium leading-none dark:text-white lg:mt-0 lg:flex lg:space-y-0 lg:space-x-2"
       >
         <p class="animate-fade-in-left">Experiencia desarrollando en</p>
         <div class="flex space-x-2 animate-fade-in-left">
           <span class="group flex items-center space-x-1.5">
-            <div class="mb-1 h-6 w-6 bg-black rounded-full dark:bg-transparent">
-              <UnrealInIcons />
-            </div>
-            <div
-              class="dark:group-hover:text-yellow-100 opacity-80 transition delay-75 ease-in-out cursor-pointer"
-            >
-              Unreal Engine
-            </div>
-          </span>
-          <div class="text-2xl font-thin leading-none text-rose-100/10">/</div>
-          <span class="group flex items-center space-x-1.5">
             <div class="mb-1 h-6 w-6  rounded-full dark:bg-transparent">
               <UnityIcons />
             </div>
-            <div
-              class="dark:group-hover:text-yellow-100 opacity-80 transition delay-75 ease-in-out cursor-pointer"
+            <div aria-label="Abrir Unity" onclick="window.open('https://unity.com/')" class="dark:group-hover:text-yellow-400 opacity-80 transition delay-75 ease-in-out cursor-pointer"
             >
               Unity
             </div>
@@ -65,11 +54,11 @@ import UnityIcons from "../Icons/UnityIcons.astro";
         </div>
       </div>
       <h2 class="text-2xl opacity-80 text-wrap animate-fade-in-left">
-        <span class="dark:text-yellow-200/90 dark:opacity-80 text-black"
-          >Desarrollador En Unreal Engine y Unity</span
-        >. <span class="dark:text-red-100/90">De Ciudad Real, España</span>. <span
+        <span class="dark:text-gray-300 dark:opacity-80 text-black"
+          >+1 año desarrollando</span
+        >. <span class="dark:text-yellow-400">Programador de VideoJuegos y Leve Art</span> <span
           class="dark:opacity-75"
-          >Especializado en crear VFX, Post Processing.</span
+          >De Cuidad Real, España. <span>Especializado en Post Processing y Inputs Controller </span
         >
       </h2>
       <nav class="flex flex-wrap gap-x-4 mt-8 animate-fade-in-left">
@@ -97,15 +86,7 @@ import UnityIcons from "../Icons/UnityIcons.astro";
           <InstagramIcons class="w-6 h-6" />
         </SocialPick>
       </nav>
-    </SectionContainer>
-    <SectionContainer class="pb-40 animate-fade-in-right" id="SobreMi">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-      >
-        <ProfileIcons class="size-8" />
-        Sobre mí
-      </h2>
-      <AboutMe />
+    </div>
     </SectionContainer>
 
     <SectionContainer  class="pb-40 animate-fade-in-right">
@@ -114,20 +95,19 @@ import UnityIcons from "../Icons/UnityIcons.astro";
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
         <Code class="size-8" />
-        Proyectos
+        Experiencia
       </h2>
       <TimeLine />
     </SectionContainer>
 
-    <SectionContainer id ="unity">
+    <SectionContainer class="pb-40 animate-fade-in-right" id="SobreMi">
       <h2
-        id="ProyectosAssets"
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
-        <UnityIcons class="size-8" />
-        Unity 
+        <ProfileIcons class="size-8" />
+        Sobre mí
       </h2>
-      <Proyectos />
+      <AboutMe />
     </SectionContainer>
   </main>
 </Layout>
